@@ -21,7 +21,7 @@
                 <div class="row" v-for="chunk in chunkedProducts" style="padding-bottom: 20px">
                     <div class="col-md-4" v-for="product in chunk">
                         <div class="card">
-                            <img class="card-img-top" src="images/equipo/carros/carro camilla tipo rodilla para ambulancia.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="/images/equipo/carros/ambulancia.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h4 class="card-title">{{product.name}}</h4>
                                 <a href="#" class="btn btn-success" style="margin-top: 6px" data-toggle="modal" data-target=".bd-example-modal-lg">Detalles</a>
@@ -33,7 +33,7 @@
                 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
-                      <img class="card-img-top" src="images/equipo/carros/carro camilla tipo rodilla para ambulancia.jpg" alt="Card image cap">
+                      <img class="card-img-top" src="/images/equipo/carros/ambulancia.jpg" alt="Card image cap">
                       <br>
                       <p class="text-center">Carro</p>
                     </div>
