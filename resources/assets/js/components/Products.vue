@@ -24,12 +24,21 @@
                             <img class="card-img-top" src="images/equipo/carros/carro camilla tipo rodilla para ambulancia.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h4 class="card-title">{{product.name}}</h4>
-                                <a href="#" class="btn btn-success" style="margin-top: 6px">Detalles</a>
+                                <a href="#" class="btn btn-success" style="margin-top: 6px" data-toggle="modal" data-target=".bd-example-modal-lg">Detalles</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <br><br>
+                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <img class="card-img-top" src="images/equipo/carros/carro camilla tipo rodilla para ambulancia.jpg" alt="Card image cap">
+                      <br>
+                      <p class="text-center">Carro</p>
+                    </div>
+                  </div>
+                </div>
                 <paginator :dataSet="dataSet" @updated="fetchData"></paginator>
             </div>
         </div>

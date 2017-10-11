@@ -32,7 +32,7 @@ $(document).ready(function() {
     });
 });
 
-
+//Wow efect for every scrolling for animated.css
 WOW.prototype.addBox = function(element) {
     this.boxes.push(element);
 };
@@ -48,7 +48,7 @@ $('.wow').on('scrollSpy:exit', function() {
     wow.addBox(this);
 }).scrollSpy();
 
-
+//Show loader gif unit page is completed loaded
 document.onreadystatechange = function() {
     var state = document.readyState
     if (state == 'interactive') {
