@@ -21,7 +21,8 @@
                 <div class="row" v-for="chunk in chunkedProducts" style="padding-bottom: 20px">
                     <div class="col-md-4" v-for="product in chunk">
                         <div class="card">
-                            <img class="card-img-top" src="/images/equipo/carros/ambulancia.jpg" alt="Card image cap">
+                            <img v-if="product.image" class="card-img-top" :src="'/storage/' + product.image" :alt="product.name">
+                            <img v-else class="card-img-top" src="/images/equipo/carros/ambulancia.jpg" :alt="product.name">
                             <div class="card-body">
                                 <h4 class="card-title">{{product.name}}</h4>
                                 <a href="#" class="btn btn-success" style="margin-top: 6px" data-toggle="modal" data-target=".bd-example-modal-lg">Detalles</a>
