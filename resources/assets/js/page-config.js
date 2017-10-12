@@ -40,6 +40,7 @@ WOW.prototype.addBox = function(element) {
 var wow = new WOW();
 
 wow.init();
+
 $('.wow').on('scrollSpy:exit', function() {
     $(this).css({
         'visibility': 'hidden',

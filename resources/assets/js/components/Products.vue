@@ -4,10 +4,10 @@
             <div class="col-md-4 wow animated bounceInLeft" style="padding-top: 100px">
                 <ul class="list-group">
                     <li class="list-group-item text-center" style="background-color: #309B32; color:white">CATEGORÍAS</li>
-                    <li class="list-group-item" @click="getProductsByCategory(1)"><a href="">Carros</a></li>
-                    <li class="list-group-item" @click="getProductsByCategory(2)">Cabinas</li>
-                    <li class="list-group-item" @click="getProductsByCategory(3)">Porta ac consectetur ac</li>
-                    <li class="list-group-item" @click="getProductsByCategory(4)">Vestibulum at eros</li>
+                    <li class="list-group-item category" :class="{ 'c-active': category == 1 }"><a @click.prevent="getProductsByCategory(1)">Carros</a></li>
+                    <li class="list-group-item category" :class="{ 'c-active': category == 2 }"><a @click.prevent="getProductsByCategory(2)">Cabinas</a></li>
+                    <li class="list-group-item category" :class="{ 'c-active': category == 3 }"><a @click.prevent="getProductsByCategory(3)">Muebles</a></li>
+                    <li class="list-group-item category" :class="{ 'c-active': category == 4 }"><a @click.prevent="getProductsByCategory(4)">Camilla</a></li>
                 </ul>
             </div>
             <div class="col-md-8 wow animated bounceInRight">
@@ -69,7 +69,7 @@
 
         methods: {
             url(page = 1){
-                return '/products/' + this.category + '/?page=' + page;
+                return '/products/category/' + this.category + '/?page=' + page;
             },
             fetchData(page){
                 this.loading = true
