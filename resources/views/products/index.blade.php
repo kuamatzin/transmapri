@@ -35,7 +35,7 @@
                         <td>{{$product->name}}</td>
                         <td>{{$product->description}}</td>
                         <td>
-                            <img src="{{$product->image}}" alt="" class="img-fluid">
+                            <img src="/storage/{{$product->image}}" alt="" class="img-fluid">
                         </td>
                         <td>
                             <a href="/products/{{$product->id}}/edit" class="btn btn-warning">Editar</a>

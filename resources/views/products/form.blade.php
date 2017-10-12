@@ -17,7 +17,7 @@
     <label for="exampleFormControlFile1">Imagen</label>
     @if(isset($product))
     <br>
-    <img src="/{{$product->image}}" alt="" class="img-fluid" width="50%">
+    <img src="/storage/{{$product->image}}" alt="" class="img-fluid" width="50%">
     <br><br>
     @endif
     <input type="file" name="file" class="form-control-file" id="exampleFormControlFile1">
