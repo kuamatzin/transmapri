@@ -39,7 +39,7 @@ class ProductController extends Controller
             'description' => 'required',
         ]);
 
-        $request['image'] = $request->file('file')->store('products', 'public');
+        $request['image'] = $request->file('file')->store('image_products', 'public');
 
         $product = Product::create($request->all());
 
@@ -58,7 +58,7 @@ class ProductController extends Controller
 
         if ($request->hasFile('file')) {
             unlink(storage_path() . '/app/public/' . $product->image);
-            $request['image'] = $request->file('file')->store('products', 'public');
+            $request['image'] = $request->file('file')->store('image_products', 'public');
         }
 
         $product->update($request->all());
