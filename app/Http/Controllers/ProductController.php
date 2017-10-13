@@ -35,8 +35,7 @@ class ProductController extends Controller
     {
         $request->validate([
             'category' => 'required',
-            'name' => 'required',
-            'description' => 'required',
+            'name' => 'required'
         ]);
 
         $request['image'] = $request->file('file')->store('image_products', 'public');
@@ -52,8 +51,7 @@ class ProductController extends Controller
     {
         $request->validate([
             'category' => 'required',
-            'name' => 'required',
-            'description' => 'required',
+            'name' => 'required'
         ]);
 
         if ($request->hasFile('file')) {
