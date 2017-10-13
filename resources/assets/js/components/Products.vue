@@ -4,10 +4,15 @@
             <div class="col-md-4 wow animated bounceInLeft" style="padding-top: 100px">
                 <ul class="list-group">
                     <li class="list-group-item text-center" style="background-color: #309B32; color:white">CATEGORÍAS</li>
-                    <li class="list-group-item category" :class="{ 'c-active': category == 1 }"><a @click.prevent="getProductsByCategory(1)">Carros</a></li>
-                    <li class="list-group-item category" :class="{ 'c-active': category == 2 }"><a @click.prevent="getProductsByCategory(2)">Cabinas</a></li>
-                    <li class="list-group-item category" :class="{ 'c-active': category == 3 }"><a @click.prevent="getProductsByCategory(3)">Muebles</a></li>
-                    <li class="list-group-item category" :class="{ 'c-active': category == 4 }"><a @click.prevent="getProductsByCategory(4)">Camilla</a></li>
+                    <li class="list-group-item category" :class="{ 'c-active': category == 1 }"><a @click.prevent="getProductsByCategory(1)">Carros y Camillas</a></li>
+                    <li class="list-group-item category" :class="{ 'c-active': category == 2 }"><a @click.prevent="getProductsByCategory(2)">Bancos</a></li>
+                    <li class="list-group-item category" :class="{ 'c-active': category == 3 }"><a @click.prevent="getProductsByCategory(3)">Lámparas</a></li>
+                    <li class="list-group-item category" :class="{ 'c-active': category == 4 }"><a @click.prevent="getProductsByCategory(4)">Chesse Longue, Escalerillas y Juegos de Consultorio</a></li>
+                    <li class="list-group-item category" :class="{ 'c-active': category == 5 }"><a @click.prevent="getProductsByCategory(5)">Clave IMSS</a></li>
+                    <li class="list-group-item category" :class="{ 'c-active': category == 6 }"><a @click.prevent="getProductsByCategory(6)">Camilla</a></li>
+                    <li class="list-group-item category" :class="{ 'c-active': category == 7 }"><a @click.prevent="getProductsByCategory(7)">Negatoscopios</a></li>
+                    <li class="list-group-item category" :class="{ 'c-active': category == 8 }"><a @click.prevent="getProductsByCategory(8)">Portasueros</a></li>
+                    <li class="list-group-item category" :class="{ 'c-active': category == 9 }"><a @click.prevent="getProductsByCategory(9)">Acero Inoxidable</a></li>
                 </ul>
             </div>
             <div class="col-md-8 wow animated bounceInRight">
