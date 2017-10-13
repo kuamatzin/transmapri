@@ -1,6 +1,6 @@
 <div class="form-group{{ $errors->has('category') ? ' has-error' : '' }}">
     {!! Form::label('category', 'Categoría') !!}
-    {!! Form::select('category', [1 => 'Carros', 2 => 'Cabinas', 3 => 'Muebles', 4 => 'Camillas'], null, ['id' => 'category', 'class' => 'form-control', 'required' => 'required']) !!}
+    {!! Form::select('category', [1 => 'Carros y Camillas', 2 => 'Bancos', 3 => 'Lámparas', 4 => 'Chesse Longue, Escalerillas y Juegos de Consultorio', 5 => 'Mesas', 6 => 'Clave IMSS', 7 => 'Negatoscopios', 8 => 'Portasueros', 9 => 'Acero Inoxidable'], null, ['id' => 'category', 'class' => 'form-control', 'required' => 'required']) !!}
     <small class="text-danger">{{ $errors->first('category') }}</small>
 </div>
 <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
