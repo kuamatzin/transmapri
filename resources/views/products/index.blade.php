@@ -15,11 +15,11 @@
                 <li class="list-group-item category {{ $category == 2 ? 'c-active' : ''}}"><a href="/products?category=2">Bancos</a></li>
                 <li class="list-group-item category {{ $category == 3 ? 'c-active' : ''}}"><a href="/products?category=3">Lámparas</a></li>
                 <li class="list-group-item category {{ $category == 4 ? 'c-active' : ''}}"><a href="/products?category=4">Chesse Longue, Escalerillas y Juegos de Consultorio</a></li>
-                <li class="list-group-item category {{ $category == 5 ? 'c-active' : ''}}"><a href="/products?category=4">Mesas</a></li>
-                <li class="list-group-item category {{ $category == 6 ? 'c-active' : ''}}"><a href="/products?category=4">Clave IMSS</a></li>
-                <li class="list-group-item category {{ $category == 7 ? 'c-active' : ''}}"><a href="/products?category=4">Negatoscopios</a></li>
-                <li class="list-group-item category {{ $category == 8 ? 'c-active' : ''}}"><a href="/products?category=4">Portasueros</a></li>
-                <li class="list-group-item category {{ $category == 9 ? 'c-active' : ''}}"><a href="/products?category=4">Acero Inoxidable</a></li>
+                <li class="list-group-item category {{ $category == 5 ? 'c-active' : ''}}"><a href="/products?category=5">Mesas</a></li>
+                <li class="list-group-item category {{ $category == 6 ? 'c-active' : ''}}"><a href="/products?category=6">Clave IMSS</a></li>
+                <li class="list-group-item category {{ $category == 7 ? 'c-active' : ''}}"><a href="/products?category=7">Negatoscopios</a></li>
+                <li class="list-group-item category {{ $category == 8 ? 'c-active' : ''}}"><a href="/products?category=8">Portasueros</a></li>
+                <li class="list-group-item category {{ $category == 9 ? 'c-active' : ''}}"><a href="/products?category=9">Acero Inoxidable</a></li>
             </ul>
         </div>
         <div class="col-md-9">
