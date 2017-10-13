@@ -30,7 +30,7 @@
                             <img v-else class="card-img-top" src="/images/equipo/carros/ambulancia.jpg" :alt="product.name">
                             <div class="card-body">
                                 <h4 class="card-title">{{product.name}}</h4>
-                                <a href="#" class="btn btn-success" style="margin-top: 6px" data-toggle="modal" data-target=".bd-example-modal-lg">Detalles</a>
+                                <a href="#" class="btn btn-success" style="margin-top: 6px" data-toggle="modal" data-target=".bd-example-modal-lg" @click="setActiveProduct(product)">Detalles</a>
                             </div>
                         </div>
                     </div>
@@ -39,9 +39,9 @@
                 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
-                      <img class="card-img-top" :src="'/storage/' + product.image" alt="Card image cap">
+                      <img class="card-img-top" :src="'/storage/' + active_product.image" alt="Card image cap">
                       <br>
-                      <p class="text-center">Carro</p>
+                      <p class="text-center">{{active_product.name}}</p>
                     </div>
                   </div>
                 </div>
@@ -69,7 +69,8 @@
                 products: '',
                 loading: false,
                 dataSet: false,
-                category: 1
+                category: 1,
+                active_product: ''
             }
         },
 
@@ -89,6 +90,9 @@
             getProductsByCategory(category){
                 this.category = category
                 this.fetchData()
+            },
+            setActiveProduct(product){
+                this.active_product = product
             }
         }
     }
