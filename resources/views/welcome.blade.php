@@ -80,7 +80,7 @@
                     <img src="images/logo.png" alt="Transmapri Logo" class="img-fluid mx-auto d-block wow animated bounceInLeft" width="400px">
                     <br><br>
                     <p class="wow animated bounceInRight" style="text-align: justify;">
-                        En  Medic Muebles & TRANSMAPRI FABRICA DE MUEBLES MEDICOS ﻿ le ofrecemos los productos más selectos y de mejor calidad  a precios muy atractivos y economicos. Para nosotros, el cliente es lo primero: sólo estamos satisfechos cuando usted lo está también
+                        En TRANSMAPRI FABRICA DE MUEBLES MEDICOS ﻿ le ofrecemos los productos más selectos y de mejor calidad  a precios muy atractivos y economicos. Para nosotros, el cliente es lo primero: sólo estamos satisfechos cuando usted lo está también
                     </p>
                 </div>
             </div>
