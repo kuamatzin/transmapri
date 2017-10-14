@@ -49,28 +49,28 @@
                 </div>
             </nav>
             <div id="home"></div>
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div id="carousel-transmapri" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carousel-transmapri" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-transmapri" data-slide-to="1"></li>
+                    <li data-target="#carousel-transmapri" data-slide-to="2"></li>
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="https://www.sunflowermedical.co.uk/storage/app/uploads/public/571/bf6/f22/571bf6f22eb77568735417.jpg" alt="First slide" style="max-height: 600px">
+                        <img class="d-block w-100" src="/images/backg1.png" alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="https://img2.cgtrader.com/items/711692/0866b8c728/medical-furniture-vol2-3d-model-max-dwg-mat.jpg" alt="Second slide" style="max-height: 600px">
+                        <img class="d-block w-100" src="/images/backg2.jpg" alt="Second slide" style="height: 700px">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="http://ostermancron.com/wp-content/uploads/2016/02/Ohio-Healthcare-Furniture-2-1.jpg" alt="Third slide" style="max-height: 600px">
+                        <img class="d-block w-100" src="/images/backg3.png" alt="Third slide" style="height: 700px">
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <a class="carousel-control-prev" href="#carousel-transmapri" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <a class="carousel-control-next" href="#carousel-transmapri" role="button" data-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
