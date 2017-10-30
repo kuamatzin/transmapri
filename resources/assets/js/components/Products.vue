@@ -26,23 +26,29 @@
                 <div class="row" v-for="chunk in chunkedProducts" style="padding-bottom: 20px">
                     <div class="col-md-4" v-for="product in chunk">
                         <div class="card">
-                            <img v-if="product.image" class="card-img-top" :src="'/storage/' + product.image" :alt="product.name">
-                            <img v-else class="card-img-top" src="/images/equipo/carros/ambulancia.jpg" :alt="product.name">
-                            <div class="card-body">
+                           <div>
+                              <img v-if="product.image" class="card-img-top" :src="'/storage/' + product.image" :alt="product.name">
+                              <img v-else class="card-img-top" src="/images/equipo/carros/ambulancia.jpg" :alt="product.name">
+                              <img style="position:relative; top: -30px;" width="100px" src="images/logo.png"/>
+                           </div>
+                           <div class="card-body">
                                 <h4 class="card-title">{{product.name}}</h4>
                                 <a href="#" class="btn btn-success" style="margin-top: 6px" data-toggle="modal" data-target=".bd-example-modal-lg" @click="setActiveProduct(product)">Detalles</a>
-                            </div>
+                           </div>
                         </div>
                     </div>
                 </div>
                 <br><br>
                 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                      <img class="card-img-top" :src="'/storage/' + active_product.image" alt="Card image cap">
-                      <br>
-                      <p class="text-center">{{active_product.name}}</p>
-                    </div>
+                     <div class="modal-content">
+                        <div>
+                           <img class="card-img-top" :src="'/storage/' + active_product.image" alt="Card image cap">
+                           <img style="position:relative; top: -60px;" width="250px" src="images/logo.png"/>
+                        </div>
+                        <br>
+                        <p class="text-center">{{active_product.name}}</p>
+                     </div>
                   </div>
                 </div>
                 <paginator :dataSet="dataSet" @updated="fetchData"></paginator>
@@ -52,48 +58,47 @@
 </template>
 
 <script>
-    export default {
-        props: [],
+export default {
+  props: [],
 
-        computed: {
-           chunkedProducts () {
-             return _.chunk(this.products, 3)
-           }
-        },
-        mounted(){
-            this.fetchData()
-        },
-
-        data(){
-            return {
-                products: '',
-                loading: false,
-                dataSet: false,
-                category: 1,
-                active_product: ''
-            }
-        },
-
-        methods: {
-            url(page = 1){
-                return '/products/category/' + this.category + '/?page=' + page;
-            },
-            fetchData(page){
-                this.loading = true
-                axios.get(this.url(page)).then(({data}) => {
-                    this.loading = false
-                    this.dataSet = data;
-                    this.products = data.data
-                    }
-                );
-            },
-            getProductsByCategory(category){
-                this.category = category
-                this.fetchData()
-            },
-            setActiveProduct(product){
-                this.active_product = product
-            }
-        }
+  computed: {
+    chunkedProducts() {
+      return _.chunk(this.products, 3);
     }
+  },
+  mounted() {
+    this.fetchData();
+  },
+
+  data() {
+    return {
+      products: "",
+      loading: false,
+      dataSet: false,
+      category: 1,
+      active_product: ""
+    };
+  },
+
+  methods: {
+    url(page = 1) {
+      return "/products/category/" + this.category + "/?page=" + page;
+    },
+    fetchData(page) {
+      this.loading = true;
+      axios.get(this.url(page)).then(({ data }) => {
+        this.loading = false;
+        this.dataSet = data;
+        this.products = data.data;
+      });
+    },
+    getProductsByCategory(category) {
+      this.category = category;
+      this.fetchData();
+    },
+    setActiveProduct(product) {
+      this.active_product = product;
+    }
+  }
+};
 </script>

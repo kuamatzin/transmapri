@@ -47044,55 +47044,61 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: [],
+  props: [],
 
-    computed: {
-        chunkedProducts: function chunkedProducts() {
-            return _.chunk(this.products, 3);
-        }
-    },
-    mounted: function mounted() {
-        this.fetchData();
-    },
-    data: function data() {
-        return {
-            products: '',
-            loading: false,
-            dataSet: false,
-            category: 1,
-            active_product: ''
-        };
-    },
-
-
-    methods: {
-        url: function url() {
-            var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-
-            return '/products/category/' + this.category + '/?page=' + page;
-        },
-        fetchData: function fetchData(page) {
-            var _this = this;
-
-            this.loading = true;
-            axios.get(this.url(page)).then(function (_ref) {
-                var data = _ref.data;
-
-                _this.loading = false;
-                _this.dataSet = data;
-                _this.products = data.data;
-            });
-        },
-        getProductsByCategory: function getProductsByCategory(category) {
-            this.category = category;
-            this.fetchData();
-        },
-        setActiveProduct: function setActiveProduct(product) {
-            this.active_product = product;
-        }
+  computed: {
+    chunkedProducts: function chunkedProducts() {
+      return _.chunk(this.products, 3);
     }
+  },
+  mounted: function mounted() {
+    this.fetchData();
+  },
+  data: function data() {
+    return {
+      products: "",
+      loading: false,
+      dataSet: false,
+      category: 1,
+      active_product: ""
+    };
+  },
+
+
+  methods: {
+    url: function url() {
+      var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+
+      return "/products/category/" + this.category + "/?page=" + page;
+    },
+    fetchData: function fetchData(page) {
+      var _this = this;
+
+      this.loading = true;
+      axios.get(this.url(page)).then(function (_ref) {
+        var data = _ref.data;
+
+        _this.loading = false;
+        _this.dataSet = data;
+        _this.products = data.data;
+      });
+    },
+    getProductsByCategory: function getProductsByCategory(category) {
+      this.category = category;
+      this.fetchData();
+    },
+    setActiveProduct: function setActiveProduct(product) {
+      this.active_product = product;
+    }
+  }
 });
 
 /***/ }),
@@ -47359,21 +47365,28 @@ var render = function() {
               _vm._l(chunk, function(product) {
                 return _c("div", { staticClass: "col-md-4" }, [
                   _c("div", { staticClass: "card" }, [
-                    product.image
-                      ? _c("img", {
-                          staticClass: "card-img-top",
-                          attrs: {
-                            src: "/storage/" + product.image,
-                            alt: product.name
-                          }
-                        })
-                      : _c("img", {
-                          staticClass: "card-img-top",
-                          attrs: {
-                            src: "/images/equipo/carros/ambulancia.jpg",
-                            alt: product.name
-                          }
-                        }),
+                    _c("div", [
+                      product.image
+                        ? _c("img", {
+                            staticClass: "card-img-top",
+                            attrs: {
+                              src: "/storage/" + product.image,
+                              alt: product.name
+                            }
+                          })
+                        : _c("img", {
+                            staticClass: "card-img-top",
+                            attrs: {
+                              src: "/images/equipo/carros/ambulancia.jpg",
+                              alt: product.name
+                            }
+                          }),
+                      _vm._v(" "),
+                      _c("img", {
+                        staticStyle: { position: "relative", top: "-30px" },
+                        attrs: { width: "100px", src: "images/logo.png" }
+                      })
+                    ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "card-body" }, [
                       _c("h4", { staticClass: "card-title" }, [
@@ -47422,13 +47435,20 @@ var render = function() {
             [
               _c("div", { staticClass: "modal-dialog modal-lg" }, [
                 _c("div", { staticClass: "modal-content" }, [
-                  _c("img", {
-                    staticClass: "card-img-top",
-                    attrs: {
-                      src: "/storage/" + _vm.active_product.image,
-                      alt: "Card image cap"
-                    }
-                  }),
+                  _c("div", [
+                    _c("img", {
+                      staticClass: "card-img-top",
+                      attrs: {
+                        src: "/storage/" + _vm.active_product.image,
+                        alt: "Card image cap"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("img", {
+                      staticStyle: { position: "relative", top: "-60px" },
+                      attrs: { width: "250px", src: "images/logo.png" }
+                    })
+                  ]),
                   _vm._v(" "),
                   _c("br"),
                   _vm._v(" "),
