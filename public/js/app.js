@@ -47454,8 +47454,8 @@ var render = function() {
                           position: "relative",
                           top: "-300px",
                           left: "50px",
-                          opacity: "0.3",
-                          color: "white",
+                          opacity: "0.4",
+                          color: "#efefef",
                           "font-size": "3em"
                         }
                       },

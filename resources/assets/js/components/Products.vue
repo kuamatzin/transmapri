@@ -44,7 +44,7 @@
                         <div class="modal-content">
                             <div>
                                 <img class="card-img-top" :src="'/storage/' + active_product.image" alt="Card image cap">
-                                <p style="position:relative; top: -300px; left: 50px; opacity: 0.3; color:white; font-size: 3em">transmaprifabricademuebles</p>
+                                <p style="position:relative; top: -300px; left: 50px; opacity: 0.4; color:#efefef; font-size: 3em">transmaprifabricademuebles</p>
                             </div>
                             <p class="text-center">{{active_product.name}}</p>
                         </div>
