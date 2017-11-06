@@ -47383,12 +47383,7 @@ var render = function() {
                               src: "/images/equipo/carros/ambulancia.jpg",
                               alt: product.name
                             }
-                          }),
-                      _vm._v(" "),
-                      _c("img", {
-                        staticStyle: { position: "relative", top: "-30px" },
-                        attrs: { width: "100px", src: "images/logo.png" }
-                      })
+                          })
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "card-body" }, [
