@@ -18,38 +18,37 @@
             <div class="col-md-8 wow animated bounceInRight">
                 <paginator :dataSet="dataSet" @updated="fetchData"></paginator>
                 <br><br>
-
+    
                 <div class="loader" v-if="loading">
                     <img src="https://www.mybpstation.com/sites/all/themes/custom/bp_theme/images/loader.gif" alt="" class="img-fluid mx-auto d-block">
                 </div>
-
-                <div class="row" v-for="chunk in chunkedProducts" style="padding-bottom: 20px">
-                    <div class="col-md-4" v-for="product in chunk">
+    
+                <div class="row" v-for="chunk in chunkedProducts" :key="chunk" style="padding-bottom: 20px">
+                    <div class="col-md-4" v-for="product in chunk" :key="product.id">
                         <div class="card">
-                           <div>
-                              <img v-if="product.image" class="card-img-top" :src="'/storage/' + product.image" :alt="product.name">
-                              <img v-else class="card-img-top" src="/images/equipo/carros/ambulancia.jpg" :alt="product.name">
-                              <img style="position:relative; top: -30px;" width="100px" src="images/logo.png"/>
-                           </div>
-                           <div class="card-body">
+                            <div>
+                                <img v-if="product.image" class="card-img-top" :src="'/storage/' + product.image" :alt="product.name">
+                                <img v-else class="card-img-top" src="/images/equipo/carros/ambulancia.jpg" :alt="product.name">
+                                <img style="position:relative; top: -30px;" width="100px" src="images/logo.png" />
+                            </div>
+                            <div class="card-body">
                                 <h4 class="card-title">{{product.name}}</h4>
                                 <a href="#" class="btn btn-success" style="margin-top: 6px" data-toggle="modal" data-target=".bd-example-modal-lg" @click="setActiveProduct(product)">Detalles</a>
-                           </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <br><br>
                 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-lg">
-                     <div class="modal-content">
-                        <div>
-                           <img class="card-img-top" :src="'/storage/' + active_product.image" alt="Card image cap">
-                           <img style="position:relative; top: -60px;" width="250px" src="images/logo.png"/>
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div>
+                                <img class="card-img-top" :src="'/storage/' + active_product.image" alt="Card image cap">
+                                <p style="position:relative; top: -300px; left: 50px; opacity: 0.3; color:white; font-size: 3em">transmaprifabricademuebles</p>
+                            </div>
+                            <p class="text-center">{{active_product.name}}</p>
                         </div>
-                        <br>
-                        <p class="text-center">{{active_product.name}}</p>
-                     </div>
-                  </div>
+                    </div>
                 </div>
                 <paginator :dataSet="dataSet" @updated="fetchData"></paginator>
             </div>
@@ -58,47 +57,48 @@
 </template>
 
 <script>
-export default {
-  props: [],
-
-  computed: {
-    chunkedProducts() {
-      return _.chunk(this.products, 3);
-    }
-  },
-  mounted() {
-    this.fetchData();
-  },
-
-  data() {
-    return {
-      products: "",
-      loading: false,
-      dataSet: false,
-      category: 1,
-      active_product: ""
+    export default {
+        props: [],
+    
+        computed: {
+            chunkedProducts() {
+                return _.chunk(this.products, 3);
+            }
+        },
+        mounted() {
+            this.fetchData();
+        },
+        data() {
+            return {
+                products: "",
+                loading: false,
+                dataSet: false,
+                category: 1,
+                active_product: ""
+            };
+        },
+    
+        methods: {
+            url(page = 1) {
+                return "/products/category/" + this.category + "/?page=" + page;
+            },
+            fetchData(page) {
+                this.loading = true;
+                axios.get(this.url(page)).then(({
+                    data
+                }) => {
+                    this.loading = false;
+                    this.dataSet = data;
+                    this.products = data.data;
+                });
+            },
+            getProductsByCategory(category) {
+                this.category = category;
+                this.fetchData();
+            },
+            setActiveProduct(product) {
+                this.active_product = product;
+            }
+        }
     };
-  },
-
-  methods: {
-    url(page = 1) {
-      return "/products/category/" + this.category + "/?page=" + page;
-    },
-    fetchData(page) {
-      this.loading = true;
-      axios.get(this.url(page)).then(({ data }) => {
-        this.loading = false;
-        this.dataSet = data;
-        this.products = data.data;
-      });
-    },
-    getProductsByCategory(category) {
-      this.category = category;
-      this.fetchData();
-    },
-    setActiveProduct(product) {
-      this.active_product = product;
-    }
-  }
-};
 </script>

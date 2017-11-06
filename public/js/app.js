@@ -47049,56 +47049,55 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: [],
+    props: [],
 
-  computed: {
-    chunkedProducts: function chunkedProducts() {
-      return _.chunk(this.products, 3);
+    computed: {
+        chunkedProducts: function chunkedProducts() {
+            return _.chunk(this.products, 3);
+        }
+    },
+    mounted: function mounted() {
+        this.fetchData();
+    },
+    data: function data() {
+        return {
+            products: "",
+            loading: false,
+            dataSet: false,
+            category: 1,
+            active_product: ""
+        };
+    },
+
+
+    methods: {
+        url: function url() {
+            var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+
+            return "/products/category/" + this.category + "/?page=" + page;
+        },
+        fetchData: function fetchData(page) {
+            var _this = this;
+
+            this.loading = true;
+            axios.get(this.url(page)).then(function (_ref) {
+                var data = _ref.data;
+
+                _this.loading = false;
+                _this.dataSet = data;
+                _this.products = data.data;
+            });
+        },
+        getProductsByCategory: function getProductsByCategory(category) {
+            this.category = category;
+            this.fetchData();
+        },
+        setActiveProduct: function setActiveProduct(product) {
+            this.active_product = product;
+        }
     }
-  },
-  mounted: function mounted() {
-    this.fetchData();
-  },
-  data: function data() {
-    return {
-      products: "",
-      loading: false,
-      dataSet: false,
-      category: 1,
-      active_product: ""
-    };
-  },
-
-
-  methods: {
-    url: function url() {
-      var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-
-      return "/products/category/" + this.category + "/?page=" + page;
-    },
-    fetchData: function fetchData(page) {
-      var _this = this;
-
-      this.loading = true;
-      axios.get(this.url(page)).then(function (_ref) {
-        var data = _ref.data;
-
-        _this.loading = false;
-        _this.dataSet = data;
-        _this.products = data.data;
-      });
-    },
-    getProductsByCategory: function getProductsByCategory(category) {
-      this.category = category;
-      this.fetchData();
-    },
-    setActiveProduct: function setActiveProduct(product) {
-      this.active_product = product;
-    }
-  }
 });
 
 /***/ }),
@@ -47361,9 +47360,13 @@ var render = function() {
           _vm._l(_vm.chunkedProducts, function(chunk) {
             return _c(
               "div",
-              { staticClass: "row", staticStyle: { "padding-bottom": "20px" } },
+              {
+                key: chunk,
+                staticClass: "row",
+                staticStyle: { "padding-bottom": "20px" }
+              },
               _vm._l(chunk, function(product) {
-                return _c("div", { staticClass: "col-md-4" }, [
+                return _c("div", { key: product.id, staticClass: "col-md-4" }, [
                   _c("div", { staticClass: "card" }, [
                     _c("div", [
                       product.image
@@ -47444,13 +47447,21 @@ var render = function() {
                       }
                     }),
                     _vm._v(" "),
-                    _c("img", {
-                      staticStyle: { position: "relative", top: "-60px" },
-                      attrs: { width: "250px", src: "images/logo.png" }
-                    })
+                    _c(
+                      "p",
+                      {
+                        staticStyle: {
+                          position: "relative",
+                          top: "-300px",
+                          left: "50px",
+                          opacity: "0.3",
+                          color: "white",
+                          "font-size": "3em"
+                        }
+                      },
+                      [_vm._v("transmaprifabricademuebles")]
+                    )
                   ]),
-                  _vm._v(" "),
-                  _c("br"),
                   _vm._v(" "),
                   _c("p", { staticClass: "text-center" }, [
                     _vm._v(_vm._s(_vm.active_product.name))
