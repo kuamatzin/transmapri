@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
+use ImageOptimizer;
+
 
 class ProductController extends Controller
 {
@@ -62,6 +64,16 @@ class ProductController extends Controller
         $product->update($request->all());
 
         flash($product->name . ' editado exitosamente')->success()->important();
+
+        return redirect('products');
+    }
+
+    public function destroy(Product $product){
+        unlink(storage_path() . '/app/public/' . $product->image);
+
+        flash($product->name . ' eliminado exitosamente')->success()->important();
+
+        $product->delete();
 
         return redirect('products');
     }

@@ -35,6 +35,7 @@
                         <th>Descripción</th>
                         <th>Imagen</th>
                         <th>Editar</th>
+                        <th>Eliminar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -48,6 +49,11 @@
                         </td>
                         <td>
                             <a href="/products/{{$product->id}}/edit" class="btn btn-warning">Editar</a>
+                        </td>
+                        <td>
+                            {!! Form::open(['url' => 'products/' . $product->id, 'method' => 'DELETE']) !!}
+                                <button type="submit" class="btn btn-danger">Eliminar</button>
+                            {!! Form::close() !!}  
                         </td>
                     </tr>
                     @endforeach
