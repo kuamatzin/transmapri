@@ -31,7 +31,7 @@
                     <div class="col-md-4" v-for="product in chunk" :key="product.id">
                         <div class="card">
                             <div>
-                                <img v-if="product.image" class="card-img-top" :src="'/storage/' + product.image" :alt="product.name">
+                                <img v-if="product.image" class="card-img-top" :src="'/storage/' + product.image" :alt="product.name" style="height: 148px">
                                 <img v-else class="card-img-top" src="/images/equipo/carros/ambulancia.jpg" :alt="product.name">
                                 <!--<img style="position:relative; top: -30px;" width="100px" src="images/logo.png" />-->
                             </div>
