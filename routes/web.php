@@ -7,8 +7,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/propuesta2', function () {
-    return view('welcome2');
+Route::get('/misionvision', function () {
+    return view('misionvision');
 });
 
 Route::get('/products/category/{category}', 'ProductController@getByCategory');

@@ -10,16 +10,20 @@
     <div class="row mt-5">
         <div class="col-md-3">
             <ul class="list-group">
-                <li class="list-group-item text-center" style="background-color: rgb(48, 155, 50); color: white;">CATEGORÍAS</li>
-                <li class="list-group-item category {{ $category == 1 || $category == null ? 'c-active' : ''}}"><a href="/products?category=1">Carros y Camillas</a></li>
-                <li class="list-group-item category {{ $category == 2 ? 'c-active' : ''}}"><a href="/products?category=2">Bancos</a></li>
-                <li class="list-group-item category {{ $category == 3 ? 'c-active' : ''}}"><a href="/products?category=3">Lámparas</a></li>
-                <li class="list-group-item category {{ $category == 4 ? 'c-active' : ''}}"><a href="/products?category=4">Chesse Longue, Escalerillas y Juegos de Consultorio</a></li>
-                <li class="list-group-item category {{ $category == 5 ? 'c-active' : ''}}"><a href="/products?category=5">Mesas</a></li>
-                <li class="list-group-item category {{ $category == 6 ? 'c-active' : ''}}"><a href="/products?category=6">Clave IMSS</a></li>
-                <li class="list-group-item category {{ $category == 7 ? 'c-active' : ''}}"><a href="/products?category=7">Negatoscopios</a></li>
-                <li class="list-group-item category {{ $category == 8 ? 'c-active' : ''}}"><a href="/products?category=8">Portasueros</a></li>
-                <li class="list-group-item category {{ $category == 9 ? 'c-active' : ''}}"><a href="/products?category=9">Acero Inoxidable</a></li>
+                <li class="list-group-item text-center" style="background-color: rgb(48, 155, 50); color: white;">MOBILIARIO</li>
+                <li class="list-group-item category {{ $category == 1 || $category == null ? 'c-active' : ''}}"><a href="/products?category=1">Bancos</a></li>
+                <li class="list-group-item category {{ $category == 2 ? 'c-active' : ''}}"><a href="/products?category=2">Camillas</a></li>
+                <li class="list-group-item category {{ $category == 3 ? 'c-active' : ''}}"><a href="/products?category=3">Carros</a></li>
+                <li class="list-group-item category {{ $category == 4 ? 'c-active' : ''}}"><a href="/products?category=4">Chesse Longue</a></li>
+                <li class="list-group-item category {{ $category == 5 ? 'c-active' : ''}}"><a href="/products?category=5">Escalerillas</a></li>
+                <li class="list-group-item category {{ $category == 6 ? 'c-active' : ''}}"><a href="/products?category=6">Lámparas</a></li>
+                <li class="list-group-item category {{ $category == 7 ? 'c-active' : ''}}"><a href="/products?category=7">Juegos de consultorio</a></li>
+                <li class="list-group-item category {{ $category == 8 ? 'c-active' : ''}}"><a href="/products?category=8">Mesas</a></li>
+                <li class="list-group-item category {{ $category == 9 ? 'c-active' : ''}}"><a href="/products?category=9">Negatoscopios</a></li>
+                <li class="list-group-item category {{ $category == 10 ? 'c-active' : ''}}"><a href="/products?category=10">Portasueros</a></li>
+                <li class="list-group-item category {{ $category == 11 ? 'c-active' : ''}}"><a href="/products?category=11">Muebles de acero inoxidable</a></li>
+                <li class="list-group-item category {{ $category == 12 ? 'c-active' : ''}}"><a href="/products?category=12">Muebles Clave IMSS</a></li>
+                <li class="list-group-item category {{ $category == 13 ? 'c-active' : ''}}"><a href="/products?category=13">Muebles sobre diseño</a></li>
             </ul>
         </div>
         <div class="col-md-9">

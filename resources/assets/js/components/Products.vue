@@ -4,15 +4,19 @@
             <div class="col-md-4 wow animated bounceInLeft" style="padding-top: 100px">
                 <ul class="list-group">
                     <li class="list-group-item text-center" style="background-color: #309B32; color:white">CATEGORÍAS</li>
-                    <li class="list-group-item category" :class="{ 'c-active': category == 1 }"><a @click.prevent="getProductsByCategory(1)">Carros y Camillas</a></li>
-                    <li class="list-group-item category" :class="{ 'c-active': category == 2 }"><a @click.prevent="getProductsByCategory(2)">Bancos</a></li>
-                    <li class="list-group-item category" :class="{ 'c-active': category == 3 }"><a @click.prevent="getProductsByCategory(3)">Lámparas</a></li>
-                    <li class="list-group-item category" :class="{ 'c-active': category == 4 }"><a @click.prevent="getProductsByCategory(4)">Chesse Longue, Escalerillas y Juegos de Consultorio</a></li>
-                    <li class="list-group-item category" :class="{ 'c-active': category == 5 }"><a @click.prevent="getProductsByCategory(5)">Mesas</a></li>
-                    <li class="list-group-item category" :class="{ 'c-active': category == 6 }"><a @click.prevent="getProductsByCategory(6)">Clave IMSS</a></li>
-                    <li class="list-group-item category" :class="{ 'c-active': category == 7 }"><a @click.prevent="getProductsByCategory(7)">Negatoscopios</a></li>
-                    <li class="list-group-item category" :class="{ 'c-active': category == 8 }"><a @click.prevent="getProductsByCategory(8)">Portasueros</a></li>
-                    <li class="list-group-item category" :class="{ 'c-active': category == 9 }"><a @click.prevent="getProductsByCategory(9)">Acero Inoxidable</a></li>
+                    <li class="list-group-item category" :class="{ 'c-active': category == 1 }"><a @click.prevent="getProductsByCategory(1)">Bancos</a></li>
+                    <li class="list-group-item category" :class="{ 'c-active': category == 2 }"><a @click.prevent="getProductsByCategory(2)">Camillas</a></li>
+                    <li class="list-group-item category" :class="{ 'c-active': category == 3 }"><a @click.prevent="getProductsByCategory(3)">Carros</a></li>
+                    <li class="list-group-item category" :class="{ 'c-active': category == 4 }"><a @click.prevent="getProductsByCategory(4)">Chesse Longue</a></li>
+                    <li class="list-group-item category" :class="{ 'c-active': category == 5 }"><a @click.prevent="getProductsByCategory(5)">Escalerillas</a></li>
+                    <li class="list-group-item category" :class="{ 'c-active': category == 6 }"><a @click.prevent="getProductsByCategory(6)">Lámparas</a></li>
+                    <li class="list-group-item category" :class="{ 'c-active': category == 7 }"><a @click.prevent="getProductsByCategory(7)">Juegos de consultorio</a></li>
+                    <li class="list-group-item category" :class="{ 'c-active': category == 8 }"><a @click.prevent="getProductsByCategory(8)">Mesas</a></li>
+                    <li class="list-group-item category" :class="{ 'c-active': category == 9 }"><a @click.prevent="getProductsByCategory(9)">Negatoscopios</a></li>
+                    <li class="list-group-item category" :class="{ 'c-active': category == 10 }"><a @click.prevent="getProductsByCategory(10)">Portasueros</a></li>
+                    <li class="list-group-item category" :class="{ 'c-active': category == 11 }"><a @click.prevent="getProductsByCategory(11)">Muebles de acero inoxidable</a></li>
+                    <li class="list-group-item category" :class="{ 'c-active': category == 12 }"><a @click.prevent="getProductsByCategory(12)">Muebles Clave IMSS</a></li>
+                    <li class="list-group-item category" :class="{ 'c-active': category == 13 }"><a @click.prevent="getProductsByCategory(13)">Muebles sobre diseño</a></li>
                 </ul>
             </div>
             <div class="col-md-8 wow animated bounceInRight">
@@ -44,7 +48,7 @@
                         <div class="modal-content">
                             <div>
                                 <img class="card-img-top" :src="'/storage/' + active_product.image" alt="Card image cap">
-                                <p style="position:relative; top: -300px; left: 50px; opacity: 0.4; color:#efefef; font-size: 3em">transmaprifabricademuebles</p>
+                                <p class="marca-agua">transmaprifabricademuebles</p>
                             </div>
                             <p class="text-center">{{active_product.name}}</p>
                         </div>

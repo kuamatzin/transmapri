@@ -1,6 +1,6 @@
 <div class="form-group{{ $errors->has('category') ? ' has-error' : '' }}">
     {!! Form::label('category', 'Categoría') !!}
-    {!! Form::select('category', [1 => 'Carros y Camillas', 2 => 'Bancos', 3 => 'Lámparas', 4 => 'Chesse Longue, Escalerillas y Juegos de Consultorio', 5 => 'Mesas', 6 => 'Clave IMSS', 7 => 'Negatoscopios', 8 => 'Portasueros', 9 => 'Acero Inoxidable'], null, ['id' => 'category', 'class' => 'form-control', 'required' => 'required']) !!}
+    {!! Form::select('category', [1 => 'Bancos', 2 => 'Carros', 3 => 'Camillas', 4 => 'Chesse Longue', 5 => 'Escalerillas', 6 => 'Lámparas', 7 => 'Juegos de consultorio', 8 => 'Mesas', 9 => 'Negatoscopios', 9 => 'Portasueros', 10 => 'Muebles de acero inoxidable', 11 => 'Muebles Clave IMSS', 12 => 'Muebles sobre diseño'], null, ['id' => 'category', 'class' => 'form-control', 'required' => 'required']) !!}
     <small class="text-danger">{{ $errors->first('category') }}</small>
 </div>
 <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
@@ -8,11 +8,13 @@
     {!! Form::text('name', null, ['class' => 'form-control', 'required' => 'required']) !!}
     <small class="text-danger">{{ $errors->first('name') }}</small>
 </div>
+<!--
 <div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
     {!! Form::label('description', 'Descripción') !!}
     {!! Form::textarea('description', null, ['class' => 'form-control']) !!}
     <small class="text-danger">{{ $errors->first('description') }}</small>
 </div>
+-->
 <div class="form-group">
     <label for="exampleFormControlFile1">Imagen</label>
     @if(isset($product))
