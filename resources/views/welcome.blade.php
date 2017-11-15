@@ -64,7 +64,7 @@
                     <div class="carousel-caption d-none d-md-block">
 						<h2>Transmapri fábrica de muebles médicos</h2>
 						<p>Calle Acacias 123, Col. Bugambilias. Puebla, Pue.</p>
-                        <p>222 2280252 3911 11</p>
+                        <p>(222) 228 02 52 y 3 99 11 11</p>
                         <br>
 					</div>
 				</div>
@@ -148,7 +148,7 @@
 				<span class="wow fadeInRight animated">
 					<i class="fa fa-envelope-o icon"></i> contacto@transmapri.com</span>
 				<span class="wow fadeInRight animated">
-					<i class="fa fa-phone icon"></i>222 2280252 3911 11</span>
+					<i class="fa fa-phone icon"></i>(222) 228 02 52 y 3 99 11 11</span>
 			</div>
 			<br>
 			<div class="row">
