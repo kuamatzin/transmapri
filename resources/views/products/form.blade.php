@@ -22,7 +22,8 @@
     <img src="/storage/{{$product->image}}" alt="" class="img-fluid" width="50%">
     <br><br>
     @endif
-    <input type="file" name="file" class="form-control-file" id="exampleFormControlFile1">
+    <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
+    <small class="text-danger">{{ $errors->first('image') }}</small>
 </div>
 <div class="btn-group pull-right">
     {!! Form::submit($submitButtonText, ['class' => 'btn btn-success']) !!}

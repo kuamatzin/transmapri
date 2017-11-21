@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use ImageOptimizer;
 
-
 class ProductController extends Controller
 {
     public function getByCategory($category)
@@ -37,10 +36,11 @@ class ProductController extends Controller
     {
         $request->validate([
             'category' => 'required',
-            'name' => 'required'
+            'name' => 'required',
+            'image' => 'required|image'
         ]);
 
-        $request['image'] = $request->file('file')->store('image_products', 'public');
+        $request['image'] = $request->file('image')->store('image_products', 'public');
 
         $product = Product::create($request->all());
 
@@ -56,9 +56,9 @@ class ProductController extends Controller
             'name' => 'required'
         ]);
 
-        if ($request->hasFile('file')) {
+        if ($request->hasFile('image')) {
             unlink(storage_path() . '/app/public/' . $product->image);
-            $request['image'] = $request->file('file')->store('image_products', 'public');
+            $request['image'] = $request->file('image')->store('image_products', 'public');
         }
 
         $product->update($request->all());
@@ -68,7 +68,8 @@ class ProductController extends Controller
         return redirect('products');
     }
 
-    public function destroy(Product $product){
+    public function destroy(Product $product)
+    {
         unlink(storage_path() . '/app/public/' . $product->image);
 
         flash($product->name . ' eliminado exitosamente')->success()->important();
