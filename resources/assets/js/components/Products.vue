@@ -5,8 +5,8 @@
                 <ul class="list-group">
                     <li class="list-group-item text-center" style="background-color: #309B32; color:white">CATEGORÍAS</li>
                     <li class="list-group-item category" :class="{ 'c-active': category == 1 }"><a @click.prevent="getProductsByCategory(1)">Bancos</a></li>
-                    <li class="list-group-item category" :class="{ 'c-active': category == 2 }"><a @click.prevent="getProductsByCategory(2)">Camillas</a></li>
-                    <li class="list-group-item category" :class="{ 'c-active': category == 3 }"><a @click.prevent="getProductsByCategory(3)">Carros</a></li>
+                    <li class="list-group-item category" :class="{ 'c-active': category == 2 }"><a @click.prevent="getProductsByCategory(2)">Carros</a></li>
+                    <li class="list-group-item category" :class="{ 'c-active': category == 3 }"><a @click.prevent="getProductsByCategory(3)">Camillas</a></li>
                     <li class="list-group-item category" :class="{ 'c-active': category == 4 }"><a @click.prevent="getProductsByCategory(4)">Chesse Longue</a></li>
                     <li class="list-group-item category" :class="{ 'c-active': category == 5 }"><a @click.prevent="getProductsByCategory(5)">Escalerillas</a></li>
                     <li class="list-group-item category" :class="{ 'c-active': category == 6 }"><a @click.prevent="getProductsByCategory(6)">Lámparas</a></li>

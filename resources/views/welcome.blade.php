@@ -52,49 +52,52 @@
 			</div>
 		</nav>
 		<div id="home"></div>
-		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-			<ol class="carousel-indicators">
-				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-				<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-			</ol>
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<img class="d-block w-100" src="/images/backg2.png" alt="First slide" width="100%">
-                    <div class="carousel-caption d-none d-md-block">
-						<h2>Transmapri fábrica de muebles médicos</h2>
-						<p>Calle Acacias 123, Col. Bugambilias. Puebla, Pue.</p>
-                        <p>(222) 228 02 52 y 3 99 11 11</p>
-                        <br>
+		<div class="container">
+			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img class="d-block w-100" src="/images/backg2.png" alt="First slide" width="100%">
+						<div class="carousel-caption d-none d-md-block">
+							<h2>Transmapri fábrica de muebles médicos</h2>
+							<p>Calle Acacias 123, Col. Bugambilias. Puebla, Pue.</p>
+							<p>(222) 228 02 52 y 3 99 11 11</p>
+							<br>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="/images/backg11.png" alt="Second slide">
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="/images/backg3.png" alt="Third slide">
 					</div>
 				</div>
-				<div class="carousel-item">
-					<img class="d-block w-100" src="/images/backg11.png" alt="Second slide">
-				</div>
-				<div class="carousel-item">
-					<img class="d-block w-100" src="/images/backg3.png" alt="Third slide">
+				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+			<div class="info" id="nosotros" style="background-color: #F8F9FA">
+				<div class="container">
+					<img src="images/logo.png" alt="Transmapri Logo" class="img-fluid mx-auto d-block wow animated bounceInLeft" width="400px">
+					<br>
+					<br>
+					<p class="wow animated bounceInRight" style="text-align: justify;">
+						En TRANSMAPRI FABRICA DE MUEBLES MEDICOS ﻿ le ofrecemos los productos más selectos y de mejor calidad a precios muy atractivos
+						y economicos. Para nosotros, el cliente es lo primero: sólo estamos satisfechos cuando usted lo está también
+					</p>
 				</div>
 			</div>
-			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-			</a>
-			<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-			</a>
 		</div>
-		<div class="info" id="nosotros" style="background-color: #F8F9FA">
-			<div class="container">
-				<img src="images/logo.png" alt="Transmapri Logo" class="img-fluid mx-auto d-block wow animated bounceInLeft" width="400px">
-				<br>
-				<br>
-				<p class="wow animated bounceInRight" style="text-align: justify;">
-					En TRANSMAPRI FABRICA DE MUEBLES MEDICOS ﻿ le ofrecemos los productos más selectos y de mejor calidad a precios muy atractivos
-					y economicos. Para nosotros, el cliente es lo primero: sólo estamos satisfechos cuando usted lo está también
-				</p>
-			</div>
-		</div>
+		
 		<!--
             <div class="vision" id="mision">
                 <div class="container">
@@ -134,39 +137,43 @@
 			</div>
 		</div>
 
-		<div class="ubicacion">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.2392600469884!2d-98.22225838504995!3d19.009175859009186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfc09f00000001%3A0x4902298d44c85075!2sFabricante+de+Muebles+medicos!5e0!3m2!1sen!2smx!4v1510768633490"
-			width="100%" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-		</div>
-
-		<div class="contacto" id="contacto">
-			<h2 class="text-center wow animated bounceInDown" style="letter-spacing: 7.5px;">CONTACTO</h2>
-			<br>
-			<div class="col-xs-12 contact-info">
-				<span class="wow fadeInRight animated">
-					<i class="fa fa-location-arrow icon"></i>Calle Acacias 123, Col. Bugambilias. Puebla, Pue.</span>
-				<span class="wow fadeInRight animated">
-					<i class="fa fa-envelope-o icon"></i> contacto@transmapri.com</span>
-				<span class="wow fadeInRight animated">
-					<i class="fa fa-phone icon"></i>(222) 228 02 52 y 3 99 11 11</span>
+		<div class="container">
+			<div class="container">
+				<div class="ubicacion">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.2392600469884!2d-98.22225838504995!3d19.009175859009186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfc09f00000001%3A0x4902298d44c85075!2sFabricante+de+Muebles+medicos!5e0!3m2!1sen!2smx!4v1510768633490"
+					width="100%" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+				</div>
 			</div>
-			<br>
-			<div class="row">
-				<div class="col-md-4"></div>
-				<div class="col-md-4">
-					<div class="contact-form">
-						<form action="">
-							<input type="text" name="nombre" class="form-control my-form wow animated bounceInRight" required="required" placeholder="Nombre">
-							<br>
-							<br>
-							<input type="email" name="email" class="form-control my-form wow animated bounceInLeft" required="required" placeholder="Email">
-							<br>
-							<br>
-							<textarea name="mensaje" class="form-control my-form wow animated bounceInRight" rows="3" required="required" placeholder="Mensaje"></textarea>
-							<br>
-							<br>
-							<button type="submit" class="btn btn-primary mx-auto d-block wow animated bounceInLeft">ENVIAR MENSAJE</button>
-						</form>
+
+			<div class="contacto" id="contacto">
+				<h2 class="text-center wow animated bounceInDown" style="letter-spacing: 7.5px;">CONTACTO</h2>
+				<br>
+				<div class="col-xs-12 contact-info">
+					<span class="wow fadeInRight animated">
+						<i class="fa fa-location-arrow icon"></i>Calle Acacias 123, Col. Bugambilias. Puebla, Pue.</span>
+					<span class="wow fadeInRight animated">
+						<i class="fa fa-envelope-o icon"></i> contacto@transmapri.com</span>
+					<span class="wow fadeInRight animated">
+						<i class="fa fa-phone icon"></i>(222) 228 02 52 y 3 99 11 11</span>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col-md-4"></div>
+					<div class="col-md-4">
+						<div class="contact-form">
+							<form action="">
+								<input type="text" name="nombre" class="form-control my-form wow animated bounceInRight" required="required" placeholder="Nombre">
+								<br>
+								<br>
+								<input type="email" name="email" class="form-control my-form wow animated bounceInLeft" required="required" placeholder="Email">
+								<br>
+								<br>
+								<textarea name="mensaje" class="form-control my-form wow animated bounceInRight" rows="3" required="required" placeholder="Mensaje"></textarea>
+								<br>
+								<br>
+								<button type="submit" class="btn btn-primary mx-auto d-block wow animated bounceInLeft">ENVIAR MENSAJE</button>
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>

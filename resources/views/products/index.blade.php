@@ -12,8 +12,8 @@
             <ul class="list-group">
                 <li class="list-group-item text-center" style="background-color: rgb(48, 155, 50); color: white;">MOBILIARIO</li>
                 <li class="list-group-item category {{ $category == 1 || $category == null ? 'c-active' : ''}}"><a href="/products?category=1">Bancos</a></li>
-                <li class="list-group-item category {{ $category == 2 ? 'c-active' : ''}}"><a href="/products?category=2">Camillas</a></li>
-                <li class="list-group-item category {{ $category == 3 ? 'c-active' : ''}}"><a href="/products?category=3">Carros</a></li>
+                <li class="list-group-item category {{ $category == 2 ? 'c-active' : ''}}"><a href="/products?category=2">Carros</a></li>
+                <li class="list-group-item category {{ $category == 3 ? 'c-active' : ''}}"><a href="/products?category=3">Camillas</a></li>
                 <li class="list-group-item category {{ $category == 4 ? 'c-active' : ''}}"><a href="/products?category=4">Chesse Longue</a></li>
                 <li class="list-group-item category {{ $category == 5 ? 'c-active' : ''}}"><a href="/products?category=5">Escalerillas</a></li>
                 <li class="list-group-item category {{ $category == 6 ? 'c-active' : ''}}"><a href="/products?category=6">Lámparas</a></li>
