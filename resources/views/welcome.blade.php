@@ -85,7 +85,8 @@
 					<span class="sr-only">Next</span>
 				</a>
 			</div>
-			<div class="info" id="nosotros" style="background-color: #F8F9FA">
+			<!--<div class="info" id="nosotros" style="background-color: #F8F9FA">-->
+			<div class="info" id="nosotros">
 				<div class="container">
 					<img src="images/logo.png" alt="Transmapri Logo" class="img-fluid mx-auto d-block wow animated bounceInLeft" width="400px">
 					<br>
@@ -144,7 +145,7 @@
 					width="100%" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
 				</div>
 			</div>
-
+			<br>
 			<div class="contacto" id="contacto">
 				<h2 class="text-center wow animated bounceInDown" style="letter-spacing: 7.5px;">CONTACTO</h2>
 				<br>
