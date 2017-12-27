@@ -6,6 +6,7 @@ use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use ImageOptimizer;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -57,7 +58,9 @@ class ProductController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
-            unlink(storage_path() . '/app/public/' . $product->image);
+            if (Storage::disk('public')->exists($product->image)) {
+                unlink(storage_path() . '/app/public/' . $product->image);
+            }
             $request['image'] = $request->file('image')->store('image_products', 'public');
         }
 
@@ -70,7 +73,9 @@ class ProductController extends Controller
 
     public function destroy(Product $product)
     {
-        unlink(storage_path() . '/app/public/' . $product->image);
+        if (Storage::disk('public')->exists($product->image)) {
+            unlink(storage_path() . '/app/public/' . $product->image);
+        }
 
         flash($product->name . ' eliminado exitosamente')->success()->important();
 
