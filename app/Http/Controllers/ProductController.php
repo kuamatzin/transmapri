@@ -38,10 +38,10 @@ class ProductController extends Controller
         $request->validate([
             'category' => 'required',
             'name' => 'required',
-            'image' => 'required|image'
+            'imageUpload' => 'required|image'
         ]);
-
-        $request['image'] = $request->file('image')->store('image_products', 'public');
+            
+        $request['image'] = $request->file('imageUpload')->store('image_products', 'public');
 
         $product = Product::create($request->all());
 
@@ -57,11 +57,11 @@ class ProductController extends Controller
             'name' => 'required'
         ]);
 
-        if ($request->hasFile('image')) {
+        if ($request->hasFile('imageUpload')) {
             if (Storage::disk('public')->exists($product->image)) {
                 unlink(storage_path() . '/app/public/' . $product->image);
             }
-            $request['image'] = $request->file('image')->store('image_products', 'public');
+            $request['image'] = $request->file('imageUpload')->store('image_products', 'public');
         }
 
         $product->update($request->all());
